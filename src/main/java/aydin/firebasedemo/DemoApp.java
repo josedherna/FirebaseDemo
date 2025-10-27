@@ -26,6 +26,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * CSC 325 Module 07 Lab
+ * Jose Hernandez
+ */
 public class DemoApp extends Application {
     public static Scene scene;
 
@@ -38,7 +42,7 @@ public class DemoApp extends Application {
         fstore = contxtFirebase.firebase();
         fauth = FirebaseAuth.getInstance();
 
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("welcome-screen"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }

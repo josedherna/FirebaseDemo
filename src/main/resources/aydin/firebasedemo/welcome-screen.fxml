@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="643.0" stylesheets="@welcome_style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemo.WelcomeController">
+    <padding>
+        <Insets bottom="50.0" top="50.0" />
+    </padding>
+    <VBox alignment="TOP_CENTER" maxHeight="500.0" maxWidth="450.0" prefHeight="400.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
+        <HBox alignment="CENTER" minHeight="80.0" prefHeight="100.0" prefWidth="450.0" styleClass="header_container">
+            <Label fx:id="headerLabel" text="Welcome">
+                <font>
+                    <Font name="System Bold" size="33.0" />
+                </font>
+            </Label>
+        </HBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" styleClass="container" VBox.vgrow="ALWAYS">
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+                <VBox fx:id="choiceContainer" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" StackPane.alignment="CENTER">
+                    <Button fx:id="registerViewButton" mnemonicParsing="false" onAction="#viewRegistration" prefHeight="50.0" prefWidth="140.0" text="Register New Account" textFill="WHITE" />
+                    <Button fx:id="loginViewButton" mnemonicParsing="false" onAction="#viewLogin" prefHeight="50.0" prefWidth="140.0" text="Log in to Account" textFill="WHITE" />
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+                </VBox>
+            <VBox fx:id="loginContainer" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" visible="false">
+               <children>
+                  <VBox prefHeight="32.0" prefWidth="450.0">
+                     <children>
+                        <Button fx:id="loginBackButton" mnemonicParsing="false" onAction="#returnToChoices" prefHeight="30.0" prefWidth="80.0" text="Back" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Email" />
+                        <TextField minHeight="30.0" prefHeight="30.0" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0">
+                     <children>
+                        <Label text="Password" />
+                        <PasswordField minHeight="30.0" prefHeight="30.0" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+                  <Button fx:id="loginButton" minHeight="30.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="80.0" text="Login" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="registerContainer" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" visible="false">
+               <children>
+                  <VBox prefHeight="32.0" prefWidth="450.0">
+                     <children>
+                        <Button fx:id="signupBackButton" minHeight="30.0" mnemonicParsing="false" onAction="#returnToChoices" prefHeight="30.0" prefWidth="80.0" text="Back" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Email" />
+                        <TextField minHeight="30.0" prefHeight="30.0" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0">
+                     <children>
+                        <Label text="Password" />
+                        <PasswordField minHeight="30.0" prefHeight="30.0" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="82.0">
+                     <children>
+                        <Label text="Display Name" />
+                        <TextField minHeight="30.0" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="154.0">
+                     <children>
+                        <Label text="Phone Number" />
+                        <TextField minHeight="30.0" promptText="###########" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+                  <Button fx:id="signUpButton" minHeight="30.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="30.0" prefWidth="80.0" text="Sign Up" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            </StackPane>
+        </VBox>
+    </VBox>
+</VBox>

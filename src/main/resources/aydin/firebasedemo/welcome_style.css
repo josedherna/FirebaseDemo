@@ -1,0 +1,19 @@
+.root {
+    -fx-background-color: #ebf6fd;
+}
+
+.header_container {
+    -fx-background-color: #8ebaf1;
+}
+
+.container {
+    -fx-background-color: #e1e6fa;
+}
+
+.button {
+    -fx-background-color: #8ebaf1;
+}
+
+.button:hover {
+    -fx-background-color: #94e1f3;
+}
