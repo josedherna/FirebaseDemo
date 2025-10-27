@@ -17,10 +17,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class PrimaryController {
     @FXML
@@ -47,10 +44,16 @@ public class PrimaryController {
     private boolean key;
     private ObservableList<Person> listOfUsers = FXCollections.observableArrayList();
     private Person person;
+    @FXML
+    private Label greetingLabel;
+    @FXML
+    private TextField phoneNumberField;
 
     public ObservableList<Person> getListOfUsers() {
         return listOfUsers;
     }
+
+    private String displayName = "";
 
     void initialize() {
 
@@ -153,5 +156,14 @@ public class PrimaryController {
 
         //asynchronously write data
         ApiFuture<WriteResult> result = docRef.set(data);
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+        greetingLabel.setText("Hello " + displayName + "!");
     }
 }
